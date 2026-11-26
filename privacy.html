@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TextWipe privacy policy</title>
+<meta name="description" content="What TextWipe does with your information: in short, it stays on your phone.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/textwipe/privacy.html">
+<meta name="theme-color" content="#f3f5f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TextWipe">
+<meta property="og:title" content="TextWipe privacy policy">
+<meta property="og:description" content="What TextWipe does with your information: in short, it stays on your phone.">
+<meta property="og:url" content="https://customgpter.github.io/textwipe/privacy.html">
+<meta property="og:image" content="https://customgpter.github.io/textwipe/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TextWipe&#x27;s Overview screen: a shield, Input paused, permission readiness and the chosen folders">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="TextWipe home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="twbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2A40"/><stop offset="1" stop-color="#090D16"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twbg)"/><path fill="#FFBA70" d="M54,22L79,32v20c0,17 -11,29 -25,35C40,81 29,69 29,52V32z"/><path fill="#121C2D" d="M54,29L73,37v15c0,13 -8,23 -19,28C43,75 35,65 35,52V37z"/><path fill="#FFBA70" d="M49,61l-10,-10 5,-5 5,5 15,-15 5,5z"/></svg><span>TextWipe</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="./#download"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main" class="doc">
+<div class="wrap">
+<div class="measure">
+<h1>Privacy policy</h1>
+<p class="lede">Last updated 26 November 2026. This policy covers the TextWipe app for Android (package uk.jj.textwipe) and this website. TextWipe is made by Jonathan Jackson, an individual developer in the United Kingdom, who can be reached by opening an issue on the project's GitHub page.</p>
+<h2 id="short">The short version</h2><ul>
+<li>TextWipe has no internet permission. There are no accounts, no servers, no advertising and no analytics.</li>
+<li>It reads incoming texts only to look for a command word and your PIN. Message text and PINs are never saved.</li>
+<li>The only things that leave your phone are text replies to the number that sent a correct command, and an alert to your trusted contact after three wrong PINs.</li>
+</ul><h2 id="kept">What stays on your phone</h2><p>TextWipe keeps your settings, chosen folders, trusted contact, command history (up to 300 events), and any command that is waiting to run. They are encrypted with AES-256-GCM using keys held in Android's Keystore. Your PIN is kept only as a salted hash. History can include sender numbers, outcomes and the map links that were sent. Android's cloud backup and device transfer are switched off for TextWipe.</p><h2 id="reach">What the app can reach</h2><table>
+<thead><tr><th scope="col">Access</th><th scope="col">Why</th><th scope="col">When</th></tr></thead>
+<tbody>
+<tr><th scope="row">Receive texts</th><td>Looking for a command word and PIN</td><td>Only while you have switched input on</td></tr>
+<tr><th scope="row">Send texts</th><td>Replies and the trusted-contact alert</td><td>Only for live commands; test mode never sends</td></tr>
+<tr><th scope="row">Location</th><td>A GPS fix for the reply</td><td>Only while a live command runs</td></tr>
+<tr><th scope="row">All files</th><td>Wiping the folders you chose</td><td>Only for a live WIPE, after its warning</td></tr>
+<tr><th scope="row">Device Admin</th><td>LOCK, and RESET where Android allows it</td><td>Only for those commands</td></tr>
+<tr><th scope="row">Notifications, alarms, full-screen alerts, Do Not Disturb</th><td>The visible warning and the ring</td><td>While a command runs</td></tr>
+<tr><th scope="row">Notification access</th><td>Optional commands by WhatsApp or RCS</td><td>Only if you switch it on</td></tr>
+<tr><th scope="row">Fingerprint</th><td>Opening the app</td><td>Only if you switch it on</td></tr>
+</tbody>
+</table><h2 id="texts">Texts and your mobile provider</h2><p>Commands and replies are ordinary texts, so they pass through your mobile provider and the sender's. Your provider may charge for replies. A map link is plain text; the person reading it needs a map app and data to open it.</p><h2 id="deleting">Keeping and deleting your data</h2><p>Clear history with your PIN on the History screen. Uninstalling TextWipe deletes everything it holds. Remove Device Admin first, from TextWipe's Settings or Android's settings.</p><h2 id="rights">Your rights</h2><p>Because the developer holds no data about you, there is nothing to request, correct or erase on a server. Everything is already in your hands.</p><h2 id="website">This website</h2><p>This site is hosted by GitHub Pages. It uses no cookies and no analytics. The only script on it unlocks the download once the lawful-use box is ticked. GitHub may keep standard web server logs, such as IP addresses, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+<h2 id="contact">Contact</h2>
+<p>Questions about this policy can be raised on <a href="https://github.com/CustomGPTer/textwipe/issues">GitHub</a>. This policy was last updated on 26 November 2026.</p>
+</div>
+</div>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="TextWipe home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="twbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2A40"/><stop offset="1" stop-color="#090D16"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twbg)"/><path fill="#FFBA70" d="M54,22L79,32v20c0,17 -11,29 -25,35C40,81 29,69 29,52V32z"/><path fill="#121C2D" d="M54,29L73,37v15c0,13 -8,23 -19,28C43,75 35,65 35,52V37z"/><path fill="#FFBA70" d="M49,61l-10,-10 5,-5 5,5 15,-15 5,5z"/></svg><span>TextWipe</span></a>
+<p>&copy; 2026 Jonathan Jackson. TextWipe is an independent app.</p>
+<p>This site uses no cookies and no tracking. The only script on it unlocks the download once the lawful-use box is ticked.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/textwipe/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>

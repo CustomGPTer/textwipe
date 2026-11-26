@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TextWipe: lock, ring, find or wipe your own Android phone by text</title>
+<meta name="description" content="TextWipe lets you text your own Android phone a command word and your PIN to lock it, ring it at full volume, get a GPS map link back, wipe the folders you chose or factory reset it. No internet permission, no account, no adverts.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/textwipe/">
+<meta name="theme-color" content="#f3f5f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TextWipe">
+<meta property="og:title" content="TextWipe: lock, ring, find or wipe your own Android phone by text">
+<meta property="og:description" content="TextWipe lets you text your own Android phone a command word and your PIN to lock it, ring it at full volume, get a GPS map link back, wipe the folders you chose or factory reset it. No internet permission, no account, no adverts.">
+<meta property="og:url" content="https://customgpter.github.io/textwipe/">
+<meta property="og:image" content="https://customgpter.github.io/textwipe/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TextWipe&#x27;s Overview screen: a shield, Input paused, permission readiness and the chosen folders">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"TextWipe","url":"https://customgpter.github.io/textwipe/","description":"TextWipe lets you text your own Android phone a command word and your PIN to lock it, ring it at full volume, get a GPS map link back, wipe the folders you chose or factory reset it. No internet permission, no account, no adverts.","applicationCategory":"SecurityApplication","operatingSystem":"Android 10 or later","softwareVersion":"1.0.2","downloadUrl":"https://github.com/CustomGPTer/textwipe/releases/latest/download/TextWipe.apk","releaseNotes":"https://customgpter.github.io/textwipe/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/textwipe/assets/og.png","featureList":["LOCK","RING","LOCATE","WIPE and RESET","15-second warning","Test mode","Wrong-PIN lockout","Nothing chosen for you","No internet permission","Encrypted on the phone","No PIN or message kept","Locked app"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is TextWipe really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts."}},{"@type":"Question","name":"Is it on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. TextWipe is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later and a SIM that can receive texts."}},{"@type":"Question","name":"Who can send it commands?","acceptedAnswer":{"@type":"Answer","text":"Anyone who knows your PIN, from any number, once you switch input on. Use a long PIN. Three wrong PINs lock remote input for an hour and text your trusted contact."}},{"@type":"Question","name":"Will it work if the phone is on silent?","acceptedAnswer":{"@type":"Answer","text":"RING uses the alarm volume, which plays on silent and vibrate. If Do Not Disturb is on, it must allow alarms."}},{"@type":"Question","name":"Does LOCATE need mobile data?","acceptedAnswer":{"@type":"Answer","text":"No. TextWipe asks for a satellite GPS fix and texts the map link back. The person reading the text needs data to open the map."}},{"@type":"Question","name":"What does WIPE delete?","acceptedAnswer":{"@type":"Answer","text":"Only the files in the folders you chose, after a 15-second alarm. Each file is overwritten once and then deleted. Folders themselves are kept, and changed or new files are left alone and reported."}},{"@type":"Question","name":"Can it factory reset my phone?","acceptedAnswer":{"@type":"Answer","text":"On Android 10 to 13 it can with Device Admin. On Android 14 and later, Android only allows it when TextWipe is set up as the phone's Device Owner, which normally means a new or freshly reset phone. The previous Google account may still be needed after a reset."}},{"@type":"Question","name":"Can I try it safely?","acceptedAnswer":{"@type":"Answer","text":"Yes. Test mode is on to start with, and every command becomes a dry run in History. The Preview buttons on the Commands screen are always dry runs."}},{"@type":"Question","name":"What if the phone restarts?","acceptedAnswer":{"@type":"Answer","text":"Texts arrive after the first unlock. A wipe or reset that was waiting starts a fresh 15-second warning."}},{"@type":"Question","name":"How do I update it?","acceptedAnswer":{"@type":"Answer","text":"Settings, Check for updates opens the releases page. Install the new file over the old one: your PIN, folders and history are kept."}},{"@type":"Question","name":"Does it work on an iPhone?","acceptedAnswer":{"@type":"Answer","text":"No. TextWipe is for Android phones only."}},{"@type":"Question","name":"Who made it?","acceptedAnswer":{"@type":"Answer","text":"TextWipe is made by Jonathan Jackson, an independent developer in the United Kingdom."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="TextWipe home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="twbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2A40"/><stop offset="1" stop-color="#090D16"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twbg)"/><path fill="#FFBA70" d="M54,22L79,32v20c0,17 -11,29 -25,35C40,81 29,69 29,52V32z"/><path fill="#121C2D" d="M54,29L73,37v15c0,13 -8,23 -19,28C43,75 35,65 35,52V37z"/><path fill="#FFBA70" d="M49,61l-10,-10 5,-5 5,5 15,-15 5,5z"/></svg><span>TextWipe</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="./#download"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>Your phone, controlled by a text.</h1>
+<p class="lede">Lost your phone, or had it taken? Text it a command word and your PIN from any phone. TextWipe locks the screen, rings it at full volume even on silent, sends back a GPS map link, wipes only the folders you chose, or asks Android for a full factory reset.</p><p class="lede">Every wipe and reset sounds a 15-second alarm first that your PIN can cancel. TextWipe has no internet permission, no account and no servers: your settings and history are encrypted on the phone, and the only thing that ever leaves it is a text reply to the number that asked.</p>
+
+<div class="gate-scope"><div class="law-box" data-gate><label><input type="checkbox"> I understand and will use this app within the law</label><p>TextWipe can lock, track and erase a phone. <a href="terms.html#law">What the law says</a></p><noscript><p>Turn on JavaScript to tick the box and download.</p></noscript></div><p class="get" id="download"><a class="button" data-href="https://github.com/CustomGPTer/textwipe/releases/latest/download/TextWipe.apk" aria-disabled="true" role="link" tabindex="-1"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p></div>
+<ul class="pills"><li>Version 1.0.2</li><li>Android 10 or later</li><li>3.8 MB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/overview.png" alt="Overview: whether input is paused, in test mode or armed, how ready the phone is, and the folders you chose." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet permission</b><span>Commands and replies travel as ordinary texts.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Encrypted</b><span>Settings and history are encrypted on your phone.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>Nothing to sign up for.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up numbers and history. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from TextWipe"><figure class="shot"><div class="phone"><img src="./assets/screens/overview.png" alt="Overview: whether input is paused, in test mode or armed, how ready the phone is, and the folders you chose." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Overview: whether input is paused, in test mode or armed, how ready the phone is, and the folders you chose.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/opening.png" alt="The opening screen. Input stays paused until you switch it on with your PIN." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The opening screen. Input stays paused until you switch it on with your PIN.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/commands.png" alt="Commands: switch input on, keep test mode on while you practise, and see what each command still needs." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Commands: switch input on, keep test mode on while you practise, and see what each command still needs.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/history.png" alt="History: every command, wrong PIN and dry run, encrypted on the phone. PINs and message text are never kept." width="393" height="852" loading="eager" decoding="async"></div><figcaption>History: every command, wrong PIN and dry run, encrypted on the phone. PINs and message text are never kept.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/access.png" alt="Permission centre: each permission explained in plain English before Android asks." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Permission centre: each permission explained in plain English before Android asks.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/unlock.png" alt="The app itself is locked with your PIN, or a fingerprint if you choose." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The app itself is locked with your PIN, or a fingerprint if you choose.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/settings.png" alt="Settings: PIN, fingerprint, trusted contact, theme and Device Admin." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Settings: PIN, fingerprint, trusted contact, theme and Device Admin.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/about.png" alt="About: the version, Check for updates and More apps." width="393" height="852" loading="eager" decoding="async"></div><figcaption>About: the version, Check for updates and More apps.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/more.png" alt="More apps: the developer&#x27;s other free apps, opened in your browser." width="393" height="852" loading="eager" decoding="async"></div><figcaption>More apps: the developer&#x27;s other free apps, opened in your browser.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">TextWipe listens for one kind of text: a command word, a space and your PIN. Nothing else is read or kept.</p>
+<ol class="steps"><li><h3>Set it up</h3><p>Choose a PIN, grant the permissions you want, and pick which folders a wipe may touch. Practise with test mode on: every command becomes a dry run.</p></li><li><h3>Arm it</h3><p>Switch input on and test mode off with your PIN. RESET has its own separate switch.</p></li><li><h3>Text your phone</h3><p>From any phone, send <b>LOCK 482915</b>, <b>RING</b>, <b>LOCATE</b>, <b>WIPE</b> or <b>RESET</b> with your PIN. TextWipe acts and texts the result and a GPS map link back to the number that asked.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>Five commands</h3><dl><div><dt>LOCK</dt><dd>Locks the screen straight away and texts back where the phone is.</dd></div><div><dt>RING</dt><dd>Full alarm volume for up to five minutes, even on silent. Your PIN stops it.</dd></div><div><dt>LOCATE</dt><dd>A satellite GPS fix with its accuracy and age, sent back as a map link.</dd></div><div><dt>WIPE and RESET</dt><dd>Wipe only the folders you chose, or ask Android for a full factory reset where the phone allows it.</dd></div></dl></div><div class="group"><h3>Built to be safe</h3><dl><div><dt>15-second warning</dt><dd>A loud on-screen alarm before any wipe or reset, cancelled by your PIN.</dd></div><div><dt>Test mode</dt><dd>Every command a dry run: no alarm, no GPS, no texts and nothing deleted.</dd></div><div><dt>Wrong-PIN lockout</dt><dd>Three wrong PINs lock remote input for an hour and text your trusted contact.</dd></div><div><dt>Nothing chosen for you</dt><dd>No folders are picked until you pick them, and RESET has its own switch.</dd></div></dl></div><div class="group"><h3>Private</h3><dl><div><dt>No internet permission</dt><dd>TextWipe cannot go online. Replies are ordinary texts.</dd></div><div><dt>Encrypted on the phone</dt><dd>Settings, history and pending commands, with keys in the phone's secure hardware.</dd></div><div><dt>No PIN or message kept</dt><dd>PINs are stored only as a salted hash and message text is never saved.</dd></div><div><dt>Locked app</dt><dd>PIN or fingerprint to open it, and it locks again when you leave it.</dd></div></dl></div><div class="group"><h3>Optional extras</h3><dl><div><dt>WhatsApp and RCS</dt><dd>Commands can also come from message notifications, if you switch it on.</dd></div><div><dt>Trusted contact</dt><dd>A number to text if someone keeps guessing your PIN.</dd></div><div><dt>After a restart</dt><dd>A pending wipe or reset starts a fresh warning after the first unlock.</dd></div><div><dt>Dark, light or match phone</dt><dd>Pick the look in Settings.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">Private by design</h2>
+<ul class="plain"><li><h3>Cannot go online</h3><p>TextWipe has no internet permission. There are no servers, accounts, adverts or analytics.</p></li><li><h3>Texts only to the asker</h3><p>Replies go only to the phone number that sent a correct command, and to your trusted contact after three wrong PINs.</p></li><li><h3>Nothing by surprise</h3><p>Input starts paused and test mode starts on. Every wipe and reset warns for 15 seconds first.</p></li></ul>
+</div>
+</section>
+
+<section id="law" aria-labelledby="law-h" class="law-band">
+<div class="wrap">
+<h2 id="law-h">Use it within the law</h2>
+<p class="intro">TextWipe is for a phone you own. Putting it on someone else's phone, using it to follow where someone goes, or wiping a phone to get rid of evidence can be a crime.</p>
+<ul class="ticks"><li><b>Computer Misuse Act 1990.</b> Installing or using TextWipe on a phone that is not yours, without the owner's permission, to get at it or to lock, change or erase it, can be an offence under sections 1 and 3.</li><li><b>Protection from Harassment Act 1997.</b> Using LOCATE to keep track of where another person goes can be stalking under section 2A.</li><li><b>Destroying evidence.</b> Wiping or resetting a phone to stop the police or a court seeing what is on it can be perverting the course of justice, a serious offence under the common law of England and Wales.</li></ul>
+<p class="after-table">Laws differ in other countries. If you are not in the UK, the rules where you are apply. Read the <a href="terms.html#law">terms of use</a>.</p>
+</div>
+</section>
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">TextWipe is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called TextWipe.apk and is about 3.8 MB. If Chrome says the file might be harmful, choose Download anyway. First tick the box to say you will use the app within the law.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>Settings, Check for updates opens the releases page in your browser, because TextWipe has no internet access of its own. Install the new file over the old one and your PIN, folders and history are kept.</p></li></ol>
+<p class="after-table">Version 1.0.2, released 26 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is TextWipe really free?</summary><p>Yes. There is no paid version, no subscription and no adverts.</p></details><details><summary>Is it on Google Play?</summary><p>No. TextWipe is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later and a SIM that can receive texts.</p></details><details><summary>Who can send it commands?</summary><p>Anyone who knows your PIN, from any number, once you switch input on. Use a long PIN. Three wrong PINs lock remote input for an hour and text your trusted contact.</p></details><details><summary>Will it work if the phone is on silent?</summary><p>RING uses the alarm volume, which plays on silent and vibrate. If Do Not Disturb is on, it must allow alarms.</p></details><details><summary>Does LOCATE need mobile data?</summary><p>No. TextWipe asks for a satellite GPS fix and texts the map link back. The person reading the text needs data to open the map.</p></details><details><summary>What does WIPE delete?</summary><p>Only the files in the folders you chose, after a 15-second alarm. Each file is overwritten once and then deleted. Folders themselves are kept, and changed or new files are left alone and reported.</p></details><details><summary>Can it factory reset my phone?</summary><p>On Android 10 to 13 it can with Device Admin. On Android 14 and later, Android only allows it when TextWipe is set up as the phone's Device Owner, which normally means a new or freshly reset phone. The previous Google account may still be needed after a reset.</p></details><details><summary>Can I try it safely?</summary><p>Yes. Test mode is on to start with, and every command becomes a dry run in History. The Preview buttons on the Commands screen are always dry runs.</p></details><details><summary>What if the phone restarts?</summary><p>Texts arrive after the first unlock. A wipe or reset that was waiting starts a fresh 15-second warning.</p></details><details><summary>How do I update it?</summary><p>Settings, Check for updates opens the releases page. Install the new file over the old one: your PIN, folders and history are kept.</p></details><details><summary>Does it work on an iPhone?</summary><p>No. TextWipe is for Android phones only.</p></details><details><summary>Who made it?</summary><p>TextWipe is made by Jonathan Jackson, an independent developer in the United Kingdom.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Keep your phone in your hands</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="./#download"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="TextWipe home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="twbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2A40"/><stop offset="1" stop-color="#090D16"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#twbg)"/><path fill="#FFBA70" d="M54,22L79,32v20c0,17 -11,29 -25,35C40,81 29,69 29,52V32z"/><path fill="#121C2D" d="M54,29L73,37v15c0,13 -8,23 -19,28C43,75 35,65 35,52V37z"/><path fill="#FFBA70" d="M49,61l-10,-10 5,-5 5,5 15,-15 5,5z"/></svg><span>TextWipe</span></a>
+<p>&copy; 2026 Jonathan Jackson. TextWipe is an independent app.</p>
+<p>This site uses no cookies and no tracking. The only script on it unlocks the download once the lawful-use box is ticked.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/textwipe/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
